@@ -1,0 +1,30 @@
+@mixin bg-img($name)  // 背景图片
+  background-image: url("./../img/#{$name}")
+  background-position: center
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  
+@mixin icon($width)
+  display: inline-block
+  width: $width
+  height: $width
+  vertical-align: middle
+
+@mixin center
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+
+@mixin circle($size)
+  +icon($size)
+  border-radius: $size
+
+// @mixin font-dpr($font-size)
+//   font-size: $font-size
+//   [data-dpr="2"] &
+//     font-size: $font-size * 2
+//   [data-dpr="3"] &
+//     font-size: $font-size * 3
+  
+
+
